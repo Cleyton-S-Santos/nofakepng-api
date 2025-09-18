@@ -63,7 +63,7 @@ async def check_rate_limit(request: Request):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://front-ui-production.up.railway.app"],  
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
