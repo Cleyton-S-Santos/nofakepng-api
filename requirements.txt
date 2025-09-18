@@ -1,0 +1,9 @@
+fastapi==0.104.1
+uvicorn==0.23.2
+python-multipart==0.0.6
+rembg==2.0.50
+Pillow==10.1.0
+pydantic==2.4.2
+typing-extensions==4.8.0
+opencv-python-headless==4.8.0.74
+numpy<2.0.0
