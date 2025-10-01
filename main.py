@@ -193,15 +193,6 @@ async def remove_background(file: UploadFile = File(...), request: Request = Non
             
             width, height = input_image.size
             logger.info(f"Imagem válida para {client_ip}: {width}x{height} pixels, Modo: {input_image.mode}")
-            
-            MAX_DIMENSION = 4000
-            
-            if width > MAX_DIMENSION or height > MAX_DIMENSION:
-                logger.warning(f"Dimensões da imagem muito grandes para {client_ip}: {width}x{height} > {MAX_DIMENSION}x{MAX_DIMENSION} - Arquivo: {file.filename}")
-                raise HTTPException(
-                    status_code=400,
-                    detail=f"A imagem é muito grande. As dimensões máximas permitidas são {MAX_DIMENSION}x{MAX_DIMENSION} pixels."
-                )
                 
         except HTTPException:
             raise
